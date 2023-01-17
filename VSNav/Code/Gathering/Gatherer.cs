@@ -166,7 +166,7 @@ namespace VSNav
                 sw.Stop();
                 Debug.WriteLine("ProcessCustomThread took : " + sw.ElapsedMilliseconds + " ms");
             }));
-            t.ApartmentState = System.Threading.ApartmentState.MTA;
+            t.SetApartmentState(System.Threading.ApartmentState.MTA);
             t.Start();
         }
 
